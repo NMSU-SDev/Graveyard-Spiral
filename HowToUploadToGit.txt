@@ -1,0 +1,28 @@
+Make a new Folder, then in Git Bash type:
+
+	git clone https://github.com/SDev-2018/Graveyard-Spiral
+
+Navigate to the new cloned folder where the name of the github repo name will be
+There is also a hidden .git folder, this is usually the folder where you will upload the contents.
+Place the contents in the folder you want to upload inside the named fodler (.git fodler)
+Then type:
+
+	git add .
+
+This will update the files needed to add to the site.
+Then check status:
+
+	git status
+
+and you should see files going to be added.
+Then commit the files:
+
+	git commit -m "Comment"
+
+A bunch of files should show up that will be changed.
+Check the status again, then push with this:
+
+	git push origin master
+
+Then input your github username and password.
+This should all you need to do to upload to the repo.
