@@ -26,3 +26,8 @@ Check the status again, then push with this:
 
 Then input your github username and password.
 This should all you need to do to upload to the repo.
+
+You might also need to pull from the repo if getting error
+for uploading:
+	
+	git pull https://github.com/SDev-2018/Graveyard-Spiral
