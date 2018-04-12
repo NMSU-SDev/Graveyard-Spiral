@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.userinput.MainActivity">
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="246dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <EditText
+        android:id="@+id/weightInput"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Weight"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="277dp" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="247dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="187dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:gravity="center_horizontal"
+        android:text="Input the following prompts"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <Button
+        android:id="@+id/submitInput"
+        android:layout_width="246dp"
+        android:layout_height="48dp"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+</android.support.constraint.ConstraintLayout>
