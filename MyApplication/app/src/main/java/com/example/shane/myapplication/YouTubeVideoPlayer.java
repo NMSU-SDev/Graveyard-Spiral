@@ -20,7 +20,7 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.youtube_player);
 
         /** Initializing YouTube Player View **/
         YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);

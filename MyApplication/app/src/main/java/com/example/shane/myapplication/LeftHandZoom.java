@@ -43,7 +43,7 @@ public class LeftHandZoom extends AppCompatActivity {
         leftHandVid.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), YouTubeVideoPlayer.class);
-                returnIntent.putExtra("com.example.shane.myapplication.SecondActivity", "");
+                returnIntent.putExtra("com.example.shane.myapplication.YouTubeVideoPlayer", "");
                 startActivity(returnIntent);
             }
         });
