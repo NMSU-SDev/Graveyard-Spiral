@@ -6,22 +6,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class RightArmZoom extends AppCompatActivity {
+public class RightHandZoom extends AppCompatActivity {
 
-    //github upload cd AndroidStudioProjects/MyApplication
-    //git clone https://github.com/shanegrayson/Project-alpha
-    //cp -r MyApplication Project-alpha
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.zoom_right_arn);
+        setContentView(R.layout.zoom_right_hand);
 
-        setTitle("PTBuddy: Right Arm");
+        setTitle("PTBuddy: Right Hand");
 
         /* These create button objects for the click listeners down below */
-        Button backBtn = findViewById(R.id.returnButtonMA);
-        Button returnHomeBtn = findViewById(R.id.returnHomeMA);
-        Button rightHandBtn = findViewById(R.id.rightHandBtn);
+        Button returnHomeBtn = findViewById(R.id.returnHomeBtn);
+        Button backBtn = findViewById(R.id.backBtn);
+        Button rightHandVid = findViewById(R.id.rightHandVideo);
 
         /*
         This is an action for our buttons, so whenever a button is click, the program
@@ -46,12 +43,11 @@ public class RightArmZoom extends AppCompatActivity {
             }
         });
 
-        rightHandBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v_1) {
-                Intent startIntent_1 = new Intent(getApplicationContext(), RightHandZoom.class);
-                startIntent_1.putExtra("com.example.shane.myapplication.RightHandZoom",
-                        "");
-                startActivity(startIntent_1);
+        rightHandVid.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent returnIntent = new Intent(getApplicationContext(), YouTubeVideoPlayer.class);
+                returnIntent.putExtra("com.example.shane.myapplication.YouTubeVideoPlayer", "");
+                startActivity(returnIntent);
             }
         });
     }

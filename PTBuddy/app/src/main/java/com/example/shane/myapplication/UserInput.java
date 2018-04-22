@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/*
+This method creates an activity that asks for the users: name, email and weight.
+ */
 public class UserInput extends AppCompatActivity {
     int weight;
     String name,email;
@@ -20,11 +23,11 @@ public class UserInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input_user);
 
-        nameInput=(EditText) findViewById(R.id.nameInput);
-        emailInput=(EditText) findViewById(R.id.emailInput);
-        weightInput=(EditText) findViewById(R.id.weightInput);
+        nameInput = findViewById(R.id.nameInput);
+        emailInput = findViewById(R.id.emailInput);
+        weightInput = findViewById(R.id.weightInput);
+        submitButton =  findViewById(R.id.submitInput);
 
-        submitButton = (Button) findViewById(R.id.submitInput);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

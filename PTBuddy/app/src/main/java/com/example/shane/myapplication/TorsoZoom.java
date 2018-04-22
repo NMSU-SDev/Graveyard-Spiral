@@ -16,9 +16,16 @@ public class TorsoZoom extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.zoom_torso);
 
-        setTitle("PTBuddy");
+        setTitle("PTBuddy: Torso");
 
+        /* These create button objects for the click listeners down below */
         Button returnActivityBtn = findViewById(R.id.returnButtonMA);
+
+        /*
+        This is an action for our buttons, so whenever a button is click, the program
+        is "listening" for a click input from the user. When clicked a new "intent" is
+        created which allows access to another activitiy.
+         */
         returnActivityBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), PTBuddy.class);
