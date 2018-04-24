@@ -50,8 +50,7 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
                                              }
                                          });
 
-        /** Initializing YouTube Player View **/
-        YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
+        YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player);
         youTubePlayerView.initialize(API_KEY, this);
     }
 
@@ -61,10 +60,9 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
     }
     @Override
     public void onInitializationSuccess(Provider provider, YouTubePlayer player, boolean wasRestored) {
-/** add listeners to YouTubePlayer instance **/
         player.setPlayerStateChangeListener(playerStateChangeListener);
         player.setPlaybackEventListener(playbackEventListener);
-/** Start buffering **/
+        /* Start buffering **/
         if (!wasRestored) {
             player.cueVideo(VIDEO_ID);
         }
