@@ -2,12 +2,15 @@ package com.example.shane.myapplication;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
 public class Start extends AppCompatActivity {
+
+    private boolean exit = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +19,39 @@ public class Start extends AppCompatActivity {
 
         setTitle("Welcome to PTBuddy");
 
-        openDialog();
+        GlobalTracker gt = new GlobalTracker();
+
+        if (gt.getGlobalVariable() == 0)
+            openDialog();
+        else
+            onBackPressed();
     }
+    /*
+Method for asking the user if they would like to exit the program
+when they press the back button at the start screen.
+ */
+    @Override
+    public void onBackPressed() {
+        if (exit)
+            this.finish();
+        else {
+            Toast.makeText(this, "Press Back again to Exit.",
+                    Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                    Intent startIntent_1 = new Intent(getApplicationContext(), PTBuddy.class);
+                    startIntent_1.putExtra("com.example.shane.myapplication.UserInfo",
+                            "");
+                    startIntent_1.setFlags(startIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                    startActivity(startIntent_1);
+                }
+            }, 3 * 1000);
+        }
+    }
+
 
     public void openDialog() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -75,5 +109,26 @@ public class Start extends AppCompatActivity {
         alertDialog.show();
     }
 
-
 }
+
+
+/*
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Closing Activity")
+                .setMessage("Are you sure you want to close this activity?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+    }
+
+*/

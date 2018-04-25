@@ -42,6 +42,7 @@ public class LeftArmZoom extends AppCompatActivity {
             public void onClick(View v_1) {
                 Intent returnIntent_1 = new Intent(getApplicationContext(), PTBuddy.class);
                 returnIntent_1.putExtra("com.example.shane.myapplication.PTBuddy", "");
+                returnIntent_1.setFlags(returnIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(returnIntent_1);
 
             }
@@ -51,6 +52,7 @@ public class LeftArmZoom extends AppCompatActivity {
             public void onClick(View v_2) {
                 Intent returnIntent_2 = new Intent(getApplicationContext(), PTBuddy.class);
                 returnIntent_2.putExtra("com.example.shane.myapplication.PTBuddy", "");
+                returnIntent_2.setFlags(returnIntent_2.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(returnIntent_2);
 
             }
@@ -59,6 +61,7 @@ public class LeftArmZoom extends AppCompatActivity {
         leftHandBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v_1) {
                 Intent startIntent_1 = new Intent(getApplicationContext(), LeftHandZoom.class);
+                startIntent_1.setFlags(startIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startIntent_1.putExtra("key", key);
                 startActivity(startIntent_1);
             }

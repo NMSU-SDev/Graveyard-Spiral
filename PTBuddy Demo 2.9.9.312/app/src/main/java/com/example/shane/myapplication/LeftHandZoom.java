@@ -38,6 +38,7 @@ public class LeftHandZoom extends AppCompatActivity {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), PTBuddy.class);
                 returnIntent.putExtra("com.example.shane.myapplication.PTBuddy", "");
+                returnIntent.setFlags(returnIntent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(returnIntent);
 
             }
@@ -47,6 +48,7 @@ public class LeftHandZoom extends AppCompatActivity {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), LeftArmZoom.class);
                 returnIntent.putExtra("com.example.shane.myapplication.LeftArmZoom", "");
+                returnIntent.setFlags(returnIntent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(returnIntent);
 
             }
@@ -56,6 +58,7 @@ public class LeftHandZoom extends AppCompatActivity {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), YouTubeVideoPlayer.class);
                 returnIntent.putExtra("com.example.shane.myapplication.YouTubeVideoPlayer", "");
+                returnIntent.setFlags(returnIntent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(returnIntent);
             }
         });
