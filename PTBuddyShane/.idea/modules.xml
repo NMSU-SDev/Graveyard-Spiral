@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+<<<<<<< HEAD
+      <module fileurl="file://C:\Users\James\Desktop\PTBuddyJames\Graveyard-Spiral\PTBuddyShane\PTBuddy.iml" filepath="C:\Users\James\Desktop\PTBuddyJames\Graveyard-Spiral\PTBuddyShane\PTBuddy.iml" />
+=======
+>>>>>>> 9969b07e35d4333242d0bf5f43a1956be160946f
+      <module fileurl="file://$PROJECT_DIR$/PTBuddyShane.iml" filepath="$PROJECT_DIR$/PTBuddyShane.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
