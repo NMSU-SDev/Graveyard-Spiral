@@ -36,6 +36,7 @@
         <activity android:name=".PTBuddy" />
         <activity android:name=".LeftHandZoom" />
         <activity android:name=".RightHandZoom" />
+        <activity android:name=".YouTubeVideoPlayer" />
     </application>
 
 </manifest>
