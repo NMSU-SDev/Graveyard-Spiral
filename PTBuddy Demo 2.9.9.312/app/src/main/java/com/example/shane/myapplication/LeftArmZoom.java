@@ -26,12 +26,13 @@ public class LeftArmZoom extends AppCompatActivity {
         Button leftHandBtn = findViewById(R.id.leftHandBtn);
 
         /* trying to global track a variable throughtout the program */
-        final int key;
+        /*
+        final int key, i = 0;
         Bundle extras = getIntent().getExtras();
         GlobalTracker userTracker = new GlobalTracker();
-        int i = userTracker.setGlobalVariable(extras.getInt("key"));
         Toast.makeText(LeftArmZoom.this, "TRACKED: " + i, Toast.LENGTH_LONG).show();
         key = i;
+        */
 
         /*
         This is an action for our buttons, so whenever a button is click, the program
@@ -62,7 +63,7 @@ public class LeftArmZoom extends AppCompatActivity {
             public void onClick(View v_1) {
                 Intent startIntent_1 = new Intent(getApplicationContext(), LeftHandZoom.class);
                 startIntent_1.setFlags(startIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
-                startIntent_1.putExtra("key", key);
+                startIntent_1.putExtra("key", "");
                 startActivity(startIntent_1);
             }
         });

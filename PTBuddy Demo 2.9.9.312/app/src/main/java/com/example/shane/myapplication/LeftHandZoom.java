@@ -22,12 +22,14 @@ public class LeftHandZoom extends AppCompatActivity {
         Button leftHandVid = findViewById(R.id.leftHandVideo);
 
         /* trying to global track a variable throughtout the program */
+        /*
         final int key;
         Bundle extras = getIntent().getExtras();
         GlobalTracker userTracker = new GlobalTracker();
         userTracker.setGlobalVariable(extras.getInt("key"));
         Toast.makeText(LeftHandZoom.this, "TRACKED: " + userTracker.getGlobalVariable(), Toast.LENGTH_LONG).show();
         key = userTracker.setGlobalVariable(userTracker.getGlobalVariable());
+        */
 
         /*
         This is an action for our buttons, so whenever a button is click, the program

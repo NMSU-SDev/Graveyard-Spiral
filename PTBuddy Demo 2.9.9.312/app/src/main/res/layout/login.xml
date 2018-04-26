@@ -4,57 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
     tools:context="com.example.shane.myapplication.LoginActivity">
 
     <!-- weight man picture -->
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="200dp"
+        android:layout_width="271dp"
         android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="87dp"
         android:adjustViewBounds="false"
+        android:contentDescription="@string/strong_man"
         android:scaleType="fitXY"
         android:visibility="visible"
-        app:srcCompat="@drawable/muscledude"
-        android:contentDescription="@string/strong_man" />
+        app:srcCompat="@drawable/ptbuddy2" />
 
     <!-- Username text box -->
     <EditText
         android:id="@+id/editText"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_below="@+id/imageView"
-        android:layout_marginTop="73dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="185dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_user"
+        android:drawableStart="@drawable/ic_action_user"
         android:ems="10"
         android:hint="@string/username"
-        android:textColorHint="@color/colorPrimary"
         android:inputType="textPersonName"
         android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
-        android:drawableStart="@drawable/ic_action_user" />
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="25sp" />
 
     <!-- Password text box -->
     <EditText
         android:id="@+id/editText2"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
         android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-185dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_pass"
         android:ems="10"
         android:hint="@string/password"
-        android:textColorHint="@color/colorPrimary"
         android:inputType="textPassword"
         android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
         android:textSize="25sp" />
 
     <!-- Login widget -->

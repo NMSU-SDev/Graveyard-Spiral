@@ -27,12 +27,14 @@ public class PTBuddy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ptbuddy);
 
+        final int key;
+        Bundle extras = getIntent().getExtras();
+
         /*
         Used for global tracking of some variables. Will resort to using Shared Preferences.
          */
         final GlobalTracker userTracker = new GlobalTracker();
-        final int key = userTracker.setGlobalVariable(0);
-        Toast.makeText(PTBuddy.this, "TRACKED: " + userTracker.getGlobalVariable(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(PTBuddy.this, "TRACKED: " + userTracker.getGlobalVariable(), Toast.LENGTH_LONG).show();
 
         /*
         Sets title of the application.
@@ -55,7 +57,7 @@ public class PTBuddy extends AppCompatActivity {
         if(taskList.get(1).numActivities == 1 &&
                 taskList.get(0).topActivity.getClassName().equals(this.getClass().getName())) {
 
-            Toast.makeText(this, "1 Stack on the Stack", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "1 Stack on the Stack", Toast.LENGTH_LONG).show();
         }
 
         /*
@@ -67,7 +69,7 @@ public class PTBuddy extends AppCompatActivity {
                                           public void onClick(View v_1) {
                                               Intent startIntent_1 = new Intent(getApplicationContext(), LeftArmZoom.class);
                                               startIntent_1.setFlags(startIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
-                                              startIntent_1.putExtra("key", key);
+                                              startIntent_1.putExtra("key", "");
                                               startActivity(startIntent_1);
                                           }
                                       }

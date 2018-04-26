@@ -35,7 +35,7 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v_1) {
-                Intent returnIntent_1 = new Intent(getApplicationContext(), RightHandZoom.class);
+                Intent returnIntent_1 = new Intent(getApplicationContext(), smiley.class);
                 returnIntent_1.putExtra("com.example.shane.myapplication.PTBuddy", "");
                 returnIntent_1.setFlags(returnIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(returnIntent_1);

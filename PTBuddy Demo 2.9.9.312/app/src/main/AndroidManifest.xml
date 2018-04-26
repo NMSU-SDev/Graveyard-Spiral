@@ -39,6 +39,7 @@
         <activity android:name=".LeftHandZoom" />
         <activity android:name=".RightHandZoom" />
         <activity android:name=".YouTubeVideoPlayer" />
+        <activity android:name=".smiley" />
     </application>
 
 </manifest>

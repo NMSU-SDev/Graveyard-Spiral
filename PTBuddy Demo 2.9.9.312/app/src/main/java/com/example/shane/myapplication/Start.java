@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class Start extends AppCompatActivity {
 
     private boolean exit = false;
+    GlobalTracker gt = new GlobalTracker();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +20,10 @@ public class Start extends AppCompatActivity {
 
         setTitle("Welcome to PTBuddy");
 
-        GlobalTracker gt = new GlobalTracker();
-
-        if (gt.getGlobalVariable() == 0)
+        if (gt.getGlobalVariable() == 0) {
+            gt.setGlobalVariable();
             openDialog();
+        }
         else
             onBackPressed();
     }
@@ -37,7 +38,7 @@ when they press the back button at the start screen.
         else {
             Toast.makeText(this, "Press Back again to Exit.",
                     Toast.LENGTH_SHORT).show();
-            exit = true;
+            //exit = true;
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -49,6 +50,7 @@ when they press the back button at the start screen.
                     startActivity(startIntent_1);
                 }
             }, 3 * 1000);
+            exit = true;
         }
     }
 
@@ -66,8 +68,7 @@ when they press the back button at the start screen.
                 Toast.makeText(Start.this, "Welcome to PTBuddy!", Toast.LENGTH_LONG).show();
 
                 Intent startIntent_1 = new Intent(getApplicationContext(), UserInput.class);
-                startIntent_1.putExtra("com.example.shane.myapplication.UserInfo",
-                        "");
+                startIntent_1.putExtra("com.example.shane.myapplication.UserInfo", gt.getGlobalVariable());
                 startIntent_1.setFlags(startIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(startIntent_1);
             }
@@ -89,7 +90,7 @@ when they press the back button at the start screen.
             }
         });
 
-        alertDialogBuilder.setNeutralButton("SKIP", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNeutralButton("SKIP GV: " + gt.getGlobalVariable(), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
             /*
