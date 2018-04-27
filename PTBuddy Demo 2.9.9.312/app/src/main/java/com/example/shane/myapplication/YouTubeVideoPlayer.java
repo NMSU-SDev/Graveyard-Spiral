@@ -48,7 +48,7 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
                                              public void onClick(View v_2) {
                                                  Intent returnIntent_2 = new Intent(getApplicationContext(), PTBuddy.class);
                                                  returnIntent_2.putExtra("com.example.shane.myapplication.PTBuddy", "");
-                                                 returnIntent_2.setFlags(returnIntent_2.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                                                 returnIntent_2.setFlags(returnIntent_2.getFlags() | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                                                  startActivity(returnIntent_2);
                                              }
                                          });
