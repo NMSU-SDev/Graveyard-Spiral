@@ -2,6 +2,7 @@ package com.example.shane.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -54,6 +55,15 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
 
         YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player);
         youTubePlayerView.initialize(API_KEY, this);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+                Intent returnIntent_1 = new Intent(getApplicationContext(), smiley.class);
+                returnIntent_1.putExtra("com.example.shane.myapplication.PTBuddy", "");
+                returnIntent_1.setFlags(returnIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(returnIntent_1);
     }
 
     @Override

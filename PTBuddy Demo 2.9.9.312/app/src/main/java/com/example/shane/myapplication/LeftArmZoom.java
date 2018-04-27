@@ -23,8 +23,8 @@ public class LeftArmZoom extends AppCompatActivity {
         /* These create button objects for the click listeners down below */
         Button returnActivityBtn = findViewById(R.id.returnButtonMA);
         Button returnHomeBtn = findViewById(R.id.returnHomeMA);
-        Button leftHandBtn = findViewById(R.id.leftHandBtn);
-
+        //Button leftHandBtn = findViewById(R.id.leftHandBtn);
+        Button leftArmVid = findViewById(R.id.leftHandVideo);
         /* trying to global track a variable throughtout the program */
         /*
         final int key, i = 0;
@@ -59,6 +59,15 @@ public class LeftArmZoom extends AppCompatActivity {
             }
         });
 
+        leftArmVid.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent returnIntent = new Intent(getApplicationContext(), YouTubeVideoPlayer.class);
+                returnIntent.putExtra("com.example.shane.myapplication.YouTubeVideoPlayer", "");
+                returnIntent.setFlags(returnIntent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(returnIntent);
+            }
+        });
+        /*
         leftHandBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v_1) {
                 Intent startIntent_1 = new Intent(getApplicationContext(), LeftHandZoom.class);
@@ -67,5 +76,6 @@ public class LeftArmZoom extends AppCompatActivity {
                 startActivity(startIntent_1);
             }
         });
+        */
     }
 }

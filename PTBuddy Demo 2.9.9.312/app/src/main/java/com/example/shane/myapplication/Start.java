@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class Start extends AppCompatActivity {
@@ -19,6 +21,17 @@ public class Start extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         setTitle("Welcome to PTBuddy");
+
+        Button returnHomeBtn = findViewById(R.id.returnHomeBtn);
+
+        returnHomeBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent returnIntent = new Intent(getApplicationContext(), PTBuddy.class);
+                returnIntent.putExtra("com.example.shane.myapplication.PTBuddy", "");
+                returnIntent.setFlags(returnIntent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(returnIntent);
+            }
+        });
 
         if (gt.getGlobalVariable() == 0) {
             gt.setGlobalVariable();
@@ -43,11 +56,6 @@ when they press the back button at the start screen.
                 @Override
                 public void run() {
                     exit = false;
-                    Intent startIntent_1 = new Intent(getApplicationContext(), PTBuddy.class);
-                    startIntent_1.putExtra("com.example.shane.myapplication.UserInfo",
-                            "");
-                    startIntent_1.setFlags(startIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(startIntent_1);
                 }
             }, 3 * 1000);
             exit = true;
