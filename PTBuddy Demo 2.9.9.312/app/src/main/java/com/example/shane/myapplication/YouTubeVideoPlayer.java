@@ -2,7 +2,10 @@ package com.example.shane.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.os.Handler;
+=======
+>>>>>>> origin/master
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -36,7 +39,11 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v_1) {
+<<<<<<< HEAD
                 Intent returnIntent_1 = new Intent(getApplicationContext(), smiley.class);
+=======
+                Intent returnIntent_1 = new Intent(getApplicationContext(), RightHandZoom.class);
+>>>>>>> origin/master
                 returnIntent_1.putExtra("com.example.shane.myapplication.PTBuddy", "");
                 returnIntent_1.setFlags(returnIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(returnIntent_1);
@@ -48,7 +55,11 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
                                              public void onClick(View v_2) {
                                                  Intent returnIntent_2 = new Intent(getApplicationContext(), PTBuddy.class);
                                                  returnIntent_2.putExtra("com.example.shane.myapplication.PTBuddy", "");
+<<<<<<< HEAD
                                                  returnIntent_2.setFlags(returnIntent_2.getFlags() | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+=======
+                                                 returnIntent_2.setFlags(returnIntent_2.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+>>>>>>> origin/master
                                                  startActivity(returnIntent_2);
                                              }
                                          });
@@ -57,6 +68,7 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
         youTubePlayerView.initialize(API_KEY, this);
     }
 
+<<<<<<< HEAD
 
     @Override
     public void onBackPressed() {
@@ -66,6 +78,8 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
                 startActivity(returnIntent_1);
     }
 
+=======
+>>>>>>> origin/master
     @Override
     public void onInitializationFailure(Provider provider, YouTubeInitializationResult result) {
         Toast.makeText(this, "Failured to Initialize!", Toast.LENGTH_LONG).show();

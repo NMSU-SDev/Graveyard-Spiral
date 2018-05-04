@@ -29,5 +29,8 @@
     <string name="name">Name</string>
     <string name="please_enter_the_following_prompts">Please enter the following prompts:</string>
     <string name="submit">Submit</string>
+<<<<<<< HEAD
     <string name="how_was_your_workout">How was your workout?</string>
+=======
+>>>>>>> origin/master
 </resources>

@@ -10,7 +10,14 @@ public class GlobalTracker extends Application {
         return globalVariable;
     }
 
+<<<<<<< HEAD
     public void setGlobalVariable() {
         globalVariable++;
+=======
+    public int setGlobalVariable(int globalVariable) {
+        globalVariable++;
+        this.globalVariable = globalVariable;
+        return globalVariable;
+>>>>>>> origin/master
     }
 }

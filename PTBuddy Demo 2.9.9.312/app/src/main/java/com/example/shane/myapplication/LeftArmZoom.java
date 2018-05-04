@@ -23,6 +23,7 @@ public class LeftArmZoom extends AppCompatActivity {
         /* These create button objects for the click listeners down below */
         Button returnActivityBtn = findViewById(R.id.returnButtonMA);
         Button returnHomeBtn = findViewById(R.id.returnHomeMA);
+<<<<<<< HEAD
         //Button leftHandBtn = findViewById(R.id.leftHandBtn);
         Button leftArmVid = findViewById(R.id.leftHandVideo);
         /* trying to global track a variable throughtout the program */
@@ -33,6 +34,17 @@ public class LeftArmZoom extends AppCompatActivity {
         Toast.makeText(LeftArmZoom.this, "TRACKED: " + i, Toast.LENGTH_LONG).show();
         key = i;
         */
+=======
+        Button leftHandBtn = findViewById(R.id.leftHandBtn);
+
+        /* trying to global track a variable throughtout the program */
+        final int key;
+        Bundle extras = getIntent().getExtras();
+        GlobalTracker userTracker = new GlobalTracker();
+        int i = userTracker.setGlobalVariable(extras.getInt("key"));
+        Toast.makeText(LeftArmZoom.this, "TRACKED: " + i, Toast.LENGTH_LONG).show();
+        key = i;
+>>>>>>> origin/master
 
         /*
         This is an action for our buttons, so whenever a button is click, the program
@@ -59,6 +71,7 @@ public class LeftArmZoom extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
         leftArmVid.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), YouTubeVideoPlayer.class);
@@ -68,14 +81,23 @@ public class LeftArmZoom extends AppCompatActivity {
             }
         });
         /*
+=======
+>>>>>>> origin/master
         leftHandBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v_1) {
                 Intent startIntent_1 = new Intent(getApplicationContext(), LeftHandZoom.class);
                 startIntent_1.setFlags(startIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+<<<<<<< HEAD
                 startIntent_1.putExtra("key", "");
                 startActivity(startIntent_1);
             }
         });
         */
+=======
+                startIntent_1.putExtra("key", key);
+                startActivity(startIntent_1);
+            }
+        });
+>>>>>>> origin/master
     }
 }

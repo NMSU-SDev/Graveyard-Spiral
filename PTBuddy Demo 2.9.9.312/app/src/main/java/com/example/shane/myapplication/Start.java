@@ -6,14 +6,20 @@ import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.Button;
+=======
+>>>>>>> origin/master
 import android.widget.Toast;
 
 public class Start extends AppCompatActivity {
 
     private boolean exit = false;
+<<<<<<< HEAD
     GlobalTracker gt = new GlobalTracker();
+=======
+>>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,7 @@ public class Start extends AppCompatActivity {
 
         setTitle("Welcome to PTBuddy");
 
+<<<<<<< HEAD
         Button returnHomeBtn = findViewById(R.id.returnHomeBtn);
 
         returnHomeBtn.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +44,12 @@ public class Start extends AppCompatActivity {
             gt.setGlobalVariable();
             openDialog();
         }
+=======
+        GlobalTracker gt = new GlobalTracker();
+
+        if (gt.getGlobalVariable() == 0)
+            openDialog();
+>>>>>>> origin/master
         else
             onBackPressed();
     }
@@ -51,14 +64,28 @@ when they press the back button at the start screen.
         else {
             Toast.makeText(this, "Press Back again to Exit.",
                     Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
             //exit = true;
+=======
+            exit = true;
+>>>>>>> origin/master
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     exit = false;
+<<<<<<< HEAD
                 }
             }, 3 * 1000);
             exit = true;
+=======
+                    Intent startIntent_1 = new Intent(getApplicationContext(), PTBuddy.class);
+                    startIntent_1.putExtra("com.example.shane.myapplication.UserInfo",
+                            "");
+                    startIntent_1.setFlags(startIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                    startActivity(startIntent_1);
+                }
+            }, 3 * 1000);
+>>>>>>> origin/master
         }
     }
 
@@ -76,7 +103,12 @@ when they press the back button at the start screen.
                 Toast.makeText(Start.this, "Welcome to PTBuddy!", Toast.LENGTH_LONG).show();
 
                 Intent startIntent_1 = new Intent(getApplicationContext(), UserInput.class);
+<<<<<<< HEAD
                 startIntent_1.putExtra("com.example.shane.myapplication.UserInfo", gt.getGlobalVariable());
+=======
+                startIntent_1.putExtra("com.example.shane.myapplication.UserInfo",
+                        "");
+>>>>>>> origin/master
                 startIntent_1.setFlags(startIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(startIntent_1);
             }
@@ -98,7 +130,11 @@ when they press the back button at the start screen.
             }
         });
 
+<<<<<<< HEAD
         alertDialogBuilder.setNeutralButton("SKIP GV: " + gt.getGlobalVariable(), new DialogInterface.OnClickListener() {
+=======
+        alertDialogBuilder.setNeutralButton("SKIP", new DialogInterface.OnClickListener() {
+>>>>>>> origin/master
             @Override
             public void onClick(DialogInterface dialog, int which) {
             /*

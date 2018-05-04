@@ -39,7 +39,10 @@
         <activity android:name=".LeftHandZoom" />
         <activity android:name=".RightHandZoom" />
         <activity android:name=".YouTubeVideoPlayer" />
+<<<<<<< HEAD
         <activity android:name=".smiley" />
+=======
+>>>>>>> origin/master
     </application>
 
 </manifest>

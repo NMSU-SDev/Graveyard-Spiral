@@ -39,6 +39,7 @@
         app:layout_constraintVertical_bias="0.689"
         android:layout_alignParentRight="true" />
 
+<<<<<<< HEAD
     <!--Youtube player Button-->
     <Button
         android:id="@+id/leftHandVideo"
@@ -52,6 +53,9 @@
 
     <!--Left Hand Button-->
     <!--
+=======
+    <!--Right Arm Button-->
+>>>>>>> origin/master
     <Button
         android:id="@+id/leftHandBtn"
         android:layout_width="210dp"
@@ -64,7 +68,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.23"
+<<<<<<< HEAD
         android:layout_alignParentRight="true"
          -->/>
+=======
+        android:layout_alignParentRight="true" />
+>>>>>>> origin/master
 
 </RelativeLayout>
