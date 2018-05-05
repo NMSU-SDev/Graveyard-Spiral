@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shane.myapplication.LeftHandZoom"
+    android:background="@drawable/ptbuddy1">
+
+    <!--Home Arm Button-->
+    <Button
+        android:id="@+id/returnHomeBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/homebutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.689"
+        android:layout_alignParentRight="true" />
+
+    <!--Youtube player Button-->
+    <Button
+        android:id="@+id/leftHandVideo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/backBtn"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        app:layout_constraintVertical_bias="0.689" />
+
+</RelativeLayout>
