@@ -20,6 +20,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="pt_buddy_icon_name">PTBuddy</string>
     <string name="username">Username</string>
     <string name="strong_man">Strong Man</string>
     <string name="password">Password</string>
