@@ -15,7 +15,7 @@ import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener
 import com.google.android.youtube.player.YouTubePlayer.Provider;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
+public class YTPlayerLegs extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     public static final String API_KEY = "AIzaSyBa0Vh37US7tpaJKpHV_RK_a3he7VX_Hxg";
     /*
@@ -23,7 +23,7 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
     Will more than likely need to create an array string the reps each body and
     access them in that matter.
      */
-    public static final String VIDEO_ID = "dDI8ClxRS04";
+    public static final String VIDEO_ID = "qJUy5QRbmD0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +33,13 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
         Button returnHomeBtn = findViewById(R.id.returnHomeBtn);
 
         returnHomeBtn.setOnClickListener(new View.OnClickListener() {
-                                             public void onClick(View v_2) {
-                                                 Intent returnIntent_2 = new Intent(getApplicationContext(), PTBuddy.class);
-                                                 returnIntent_2.putExtra("com.example.shane.myapplication.PTBuddy", "");
-                                                 returnIntent_2.setFlags(returnIntent_2.getFlags() | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
-                                                 startActivity(returnIntent_2);
-                                             }
-                                         });
+            public void onClick(View v) {
+                Intent returnIntent = new Intent(getApplicationContext(), PTBuddy.class);
+                returnIntent.putExtra("com.example.shane.myapplication.PTBuddy", "");
+                returnIntent.setFlags(returnIntent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(returnIntent);
+            }
+        });
 
         YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player);
         youTubePlayerView.initialize(API_KEY, this);
@@ -48,10 +48,10 @@ public class YouTubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
 
     @Override
     public void onBackPressed() {
-                Intent returnIntent_1 = new Intent(getApplicationContext(), smiley.class);
-                returnIntent_1.putExtra("com.example.shane.myapplication.PTBuddy", "");
-                returnIntent_1.setFlags(returnIntent_1.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
-                startActivity(returnIntent_1);
+        Intent returnIntent = new Intent(getApplicationContext(), smiley.class);
+        returnIntent.putExtra("com.example.shane.myapplication.PTBuddy", "");
+        returnIntent.setFlags(returnIntent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(returnIntent);
     }
 
     @Override
