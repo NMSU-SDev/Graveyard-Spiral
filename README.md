@@ -1,8 +1,7 @@
 ## Graveyard-Spiral - ReadMe
-=====
+-----
 
-### Application description:
------ 
+### Application description:----- 
 Physical Training Buddy (PTBuddy) is a mobile application designed to help and encourage users to fully complete their physical rehabilitation.
 
 ### Installation Instructions:
