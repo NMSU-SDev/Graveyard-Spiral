@@ -1,4 +1,8 @@
-Graveyard-Spiral
+<html>
+<head>
+    <title>Graveyard-Spiral - ReadMe</title>
+</head>
+<body>
 
 Application description:
 
@@ -16,3 +20,4 @@ Testing and Application Changes:
 
 Link to Most Recent Application:
 
+</body>
