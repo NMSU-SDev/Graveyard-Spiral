@@ -24,4 +24,4 @@ When making changes to the application in Android Studio, it is best to click th
 
 ### Link to Most Recent Release:
 -----
-Current link to most recent release --> [PTBuddy Recent Release](https://github.com/SDev-2018/Graveyard-Spiral/releases/tag/v.4.1)
+Current link to most recent release --> [PTBuddy Recent Release](https://github.com/SDev-2018/Graveyard-Spiral/releases/tag/v.5.0)
