@@ -8,9 +8,6 @@ import android.widget.Button;
 
 public class TorsoZoom extends AppCompatActivity {
 
-    //github upload cd AndroidStudioProjects/MyApplication
-    //git clone https://github.com/shanegrayson/Project-alpha
-    //cp -r MyApplication Project-alpha
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +15,12 @@ public class TorsoZoom extends AppCompatActivity {
 
         setTitle("PTBuddy: Torso");
 
+        /*
+        Button object for the YouTube Video Player
+        Precondition: user trying to access a YouTube Video
+        Postcondition: Calls the YouTube player associated class
+         */
         Button torsoVideo = findViewById(R.id.torsoVideo);
-
         torsoVideo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), YTPlayerTorso.class);

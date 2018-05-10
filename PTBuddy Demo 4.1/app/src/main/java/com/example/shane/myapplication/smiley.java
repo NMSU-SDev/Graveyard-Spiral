@@ -10,10 +10,8 @@ import android.widget.Toast;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
 
-/**
- * Created by James on 4/24/2018.
- */
 
+//Created by James on 4/24/2018.
 public class smiley extends AppCompatActivity {
     private static final String TAG = "smiley";
 
@@ -25,9 +23,11 @@ public class smiley extends AppCompatActivity {
         smileRating.setOnSmileySelectionListener(new SmileRating.OnSmileySelectionListener() {
             @Override
             public void onSmileySelected(@BaseRating.Smiley int smiley, boolean reselected) {
-                // reselected is false when user selects different smiley that previously selected one
-                // true when the same smiley is selected.
-                // Except if it first time, then the value will be false.
+                /*
+                reselected is false when user selects different smiley that previously selected one
+                true when the same smiley is selected.
+                Except if it first time, then the value will be false.
+                 */
                 switch (smiley) {
                     case SmileRating.BAD:
                         Log.i(TAG, "Bad");
@@ -58,6 +58,11 @@ public class smiley extends AppCompatActivity {
 
         Button returnHomeBtn = findViewById(R.id.returnHomeBtn);
 
+        /*
+        Button object for the return home button
+        Precondition: user trying to exit the application
+        Postcondition: returns the user to the main of the application
+         */
         returnHomeBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), PTBuddy.class);

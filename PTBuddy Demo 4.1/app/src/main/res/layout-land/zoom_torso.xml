@@ -11,7 +11,7 @@
     <!--Youtube player Button-->
     <Button
         android:id="@+id/torsoVideo"
-        android:layout_width="300dp"
+        android:layout_width="344dp"
         android:layout_height="456dp"
         android:layout_centerInParent="true"
         android:layout_marginBottom="8dp"

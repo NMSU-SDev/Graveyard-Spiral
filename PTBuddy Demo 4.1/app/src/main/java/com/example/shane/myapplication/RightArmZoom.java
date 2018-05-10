@@ -8,25 +8,19 @@ import android.widget.Button;
 
 public class RightArmZoom extends AppCompatActivity {
 
-    //github upload cd AndroidStudioProjects/MyApplication
-    //git clone https://github.com/shanegrayson/Project-alpha
-    //cp -r MyApplication Project-alpha
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.zoom_right_arn);
-        Button rightArmVid = findViewById(R.id.rightArmVideo);
 
         setTitle("PTBuddy: Right Arm");
 
-        /* These create button objects for the click listeners down below */
-        Button returnHomeBtn = findViewById(R.id.returnHomeMA);
-
         /*
-        This is an action for our buttons, so whenever a button is click, the program
-        is "listening" for a click input from the user. When clicked a new "intent" is
-        created which allows access to another activitiy.
+        Button object for the return home button
+        Precondition: user trying to exit the application
+        Postcondition: returns the user to the main of the application
          */
+        Button returnHomeBtn = findViewById(R.id.returnHomeMA);
         returnHomeBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), PTBuddy.class);
@@ -37,6 +31,12 @@ public class RightArmZoom extends AppCompatActivity {
             }
         });
 
+        /*
+        Button object for the YouTube Video Player
+        Precondition: user trying to access a YouTube Video
+        Postcondition: Calls the YouTube player associated class
+         */
+        Button rightArmVid = findViewById(R.id.rightArmVideo);
         rightArmVid.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), YTPlayerArms.class);

@@ -18,11 +18,8 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class YTPlayerLegs extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     public static final String API_KEY = "AIzaSyBa0Vh37US7tpaJKpHV_RK_a3he7VX_Hxg";
-    /*
-    The video id is the youtube video id needed to play the desired video. We
-    Will more than likely need to create an array string the reps each body and
-    access them in that matter.
-     */
+
+    //The video id is the youtube video id needed to play the desired video.
     public static final String VIDEO_ID = "qJUy5QRbmD0";
 
     @Override
@@ -30,8 +27,12 @@ public class YTPlayerLegs extends YouTubeBaseActivity implements YouTubePlayer.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.youtube_player);
 
+        /*
+        Button object for the return home button
+        Precondition: user trying to exit the application
+        Postcondition: returns the user to the main of the application
+         */
         Button returnHomeBtn = findViewById(R.id.returnHomeBtn);
-
         returnHomeBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent returnIntent = new Intent(getApplicationContext(), PTBuddy.class);
@@ -45,7 +46,11 @@ public class YTPlayerLegs extends YouTubeBaseActivity implements YouTubePlayer.O
         youTubePlayerView.initialize(API_KEY, this);
     }
 
-
+    /*
+    Override command on onBackPressed to change how the back button on a phone operates
+    Precondition: user trying to use a phones back button
+    Postcondition: exits the application
+     */
     @Override
     public void onBackPressed() {
         Intent returnIntent = new Intent(getApplicationContext(), smiley.class);

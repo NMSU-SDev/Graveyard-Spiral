@@ -10,10 +10,9 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
         android:adjustViewBounds="false"
         android:contentDescription="@string/strong_man"
         android:scaleType="fitXY"
@@ -21,15 +20,55 @@
         app:srcCompat="@drawable/logo4_1"
         android:layout_alignParentLeft="true" />
 
+    <!-- Username text box -->
+    <!--
+ <EditText
+     android:id="@+id/editText"
+     android:layout_width="200dp"
+     android:layout_height="50dp"
+     android:layout_alignParentBottom="true"
+     android:layout_centerHorizontal="true"
+     android:layout_marginBottom="217dp"
+     android:background="#11000000"
+     android:drawableLeft="@drawable/ic_action_user"
+     android:drawableStart="@drawable/ic_action_user"
+     android:ems="10"
+     android:hint="@string/username"
+     android:inputType="textPersonName"
+     android:textColor="@color/colorPrimary"
+     android:textColorHint="@color/colorPrimary"
+     android:textSize="25sp" />
+     -->
+
+ <!-- Password text box -->
+    <!--
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-217dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:drawableStart="@drawable/ic_action_pass"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="25sp" />
+        -->
+
+
     <CheckBox
         android:id="@+id/checkbox_login"
-        android:layout_width="221dp"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_login"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="106dp"
         android:text="Remember my login info"
-        android:textScaleX="1.2"/>
+        android:textScaleX="1.2" />
 
     <!-- Login widget -->
     <android.support.v7.widget.CardView
@@ -37,7 +76,6 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="39dp"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="25dp"
         app:cardElevation="10dp">
@@ -56,8 +94,7 @@
                 android:text="@string/login"
                 android:textAlignment="center"
                 android:textColor="#ffff"
-                android:textSize="30sp"
-                android:layout_alignParentLeft="true" />
+                android:textSize="30sp" />
 
         </RelativeLayout>
 
@@ -65,20 +102,21 @@
 
     <EditText
         android:id="@+id/email_login"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="Email Address"
         android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/password_login"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/email_login"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="179dp"
+        android:layout_marginTop="0dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword" />

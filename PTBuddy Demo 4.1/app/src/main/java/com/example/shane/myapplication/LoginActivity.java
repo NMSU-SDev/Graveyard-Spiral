@@ -11,13 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-
 public class LoginActivity extends AppCompatActivity {
-    /*
-    Used to track if the user is new. If set to 0 then they are new
-    if set to 1 then they are a returning user. It would probably be best
-    to have some PTBuddy load-in/beginning screen.
-    **/
 
     private SharedPreferences mPref;
     private SharedPreferences.Editor mEdit;
@@ -45,9 +39,6 @@ public class LoginActivity extends AppCompatActivity {
         If the user chooses "no" then it send the user to the UserInput
         Activity. If stated "yes" then just stays put at LoginActivity.
         */
-
-        //Toast.makeText(LoginActivity.this, "Welcome to PTBuddy", Toast.LENGTH_LONG).show();
-
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ApplySharedPref")
             @Override

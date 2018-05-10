@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-/*
-This method creates an activity that asks for the users: name, email and weight.
- */
+//Method that creates an activity that asks for the users: name, email and weight.
 public class UserInput extends AppCompatActivity {
     int weight;
     String name;

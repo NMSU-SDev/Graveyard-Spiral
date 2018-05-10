@@ -1,7 +1,7 @@
 ## Graveyard-Spiral - ReadMe
 -----
 
-### Application description:
+### Application Description:
 ----- 
 Physical Training Buddy (PTBuddy) is a mobile application designed to help and encourage users to fully complete their physical rehabilitation.
 
@@ -9,7 +9,7 @@ Physical Training Buddy (PTBuddy) is a mobile application designed to help and e
 -----
 You must need Android Studio and a Smart Phone with Developer mode turned on. Turning dev mode on is different for every phone, so please research on what this means. Download Source Code in the Releases section and extract anywhere onto your computer. Plug in your phone and press the play button at the top of Android Studio and choose the phone plugged in. This will automatically install PTBuddy onto your phone.
 
-### Avoiding Git conflicts: 
+### Avoiding Git Conflicts: 
 -----
 
 1. git checkout master
