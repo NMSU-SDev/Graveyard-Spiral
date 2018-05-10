@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Graveyard-Spiral - ReadMe</title>
+Graveyard-Spiral - ReadMe
 </head>
 <body>
 
@@ -10,11 +10,13 @@ Installation Instructions:
 
 Avoiding Git conflicts: 
 
-1. git checkout master
-2. git pull origin master
-3. git checkout <branchname> [assuming you have already created a branch to work in]
-4. git merge master
-5. git push
+<ol>
+<l1> git checkout master
+<l2> git pull origin master
+<l3> git checkout <branchname> [assuming you have already created a branch to work in]
+<l4> git merge master
+<l5> git push
+</ol>
 
 Testing and Application Changes:
 
