@@ -17,7 +17,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class YTPlayerArms extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
-    public static final String API_KEY = "AIzaSyBa0Vh37US7tpaJKpHV_RK_a3he7VX_Hxg";
+    public static final String API_KEY = ""; //API key on request
 
     //the video id is the youtube video id needed to play the desired video.
     public static final String VIDEO_ID = "dDI8ClxRS04";
